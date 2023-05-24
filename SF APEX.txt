@@ -1,0 +1,29 @@
+m...@cloudassn.me
+pass: c..o.sf@123
+
+APEX CODE:
+
+MyCustomController.apxc
+
+public class MyCustomController {
+	public List<Account> getAccounts() {
+        return [SELECT Id, Name, Industry FROM Account LIMIT 10];
+    }
+}
+
+
+
+
+VISUALPAGE:
+
+MyCustomPage.vfp
+
+<apex:page controller="MyCustomController">
+    <apex:pageBlock title="Account List">
+        <apex:pageBlockTable value="{!accounts}" var="acc">
+            <apex:column value="{!acc.Name}"/>
+            <apex:column value="{!acc.Industry}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>
+

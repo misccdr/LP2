@@ -1,0 +1,7 @@
+1. Install Google Cloud SDK/CLI
+2. In terminal, gcloud init
+3. Login on browser
+4. Select the Project
+5. In terminal, gcloud components install app-engine-python
+6. In terminal, gcloud app create
+7. Select Region
